@@ -1031,7 +1031,7 @@ class Client(BaseClient):
         return output_data
 
     def get_historical_klines_generator(self, symbol, interval, start_str, end_str=None, limit=500,
-                                        klines_type:HistoricalKlinesType=HistoricalKlinesType.SPOT):
+                                        klines_type: HistoricalKlinesType = HistoricalKlinesType.SPOT):
         """Get Historical Klines generator from Binance
 
         :param symbol: Name of symbol pair e.g BNBBTC
@@ -1054,7 +1054,7 @@ class Client(BaseClient):
         return self._historical_klines_generator(symbol, interval, start_str, end_str, limit, klines_type=klines_type)
 
     def _historical_klines_generator(self, symbol, interval, start_str, end_str, limit,
-                                     klines_type:HistoricalKlinesType=HistoricalKlinesType.SPOT):
+                                     klines_type: HistoricalKlinesType = HistoricalKlinesType.SPOT):
         """Get Historical Klines generator from Binance (spot or futures)
 
         See dateparser docs for valid start and end string formats http://dateparser.readthedocs.io/en/latest/
@@ -7508,8 +7508,8 @@ class AsyncClient(BaseClient):
                 break
 
             # increment next call by our timeframe
-            start_ts += timeframe            
-            
+            start_ts += timeframe
+
             # exit loop if we reached end_ts before reaching <limit> klines
             if start_ts > end_ts:
                 break
