@@ -1,6 +1,81 @@
 Changelog
 =========
 
+v1.0.19 - 2023-08-11
+^^^^^^^^^^^^^^^^^^^^
+
+**Added**
+
+- some new futures and margin endpoints
+- pass session_params to streams for AsyncClient
+
+**Fixed**
+
+- removed debug statements
+- options testnet URL
+- accessing msg variable before assignment
+
+v1.0.18 - 2023-08-09
+^^^^^^^^^^^^^^^^^^^^
+
+**Added**
+
+- TRAILING_STOP_MARKET option for orders
+
+**Fixed**
+
+- futures api endpoint versions
+- margin endpoint request methods
+
+
+v1.0.17 - 2023-02-21
+^^^^^^^^^^^^^^^^^^^^
+
+**Added**
+
+- RSA key authentication
+- Support for api1, api2, api3, api4 base endpoints
+- binance.us staking endpoints
+- Options ticker by expiration socket
+- Staking endpoints
+- Pay and Convert endpoints
+- Futures index info endpoint
+- Open OCO Orders endpoint
+- Param to pass session params to aiohttp.ClientSession
+
+**Updated**
+
+- Some margin endpoint versions
+- Support testnet for more streams
+
+**Fixed**
+
+- Indefinite websocket reconnect loop
+- Crash on parsing code from some errors
+
+v1.0.16 - 2022-04-09
+^^^^^^^^^^^^^^^^^^^^
+
+**Added**
+
+- pass limit param to all kline functions
+- increase default for kline functions from 500 to 1000
+- add HistoricalKlinesType.FUTURES_COIN as option for kline functions
+- testnet URL for coin_futures_socket
+
+**Updated**
+
+- round_step_size more accurate
+
+**Fixed**
+
+- remove deprecated loop param
+- websockets unpinned
+- hanging websockets in exiting state
+- check start_ts after end_ts for klines
+- multi assets margin params
+
+
 v1.0.15 - 2021-09-27
 ^^^^^^^^^^^^^^^^^^^^
 

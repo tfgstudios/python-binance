@@ -1,5 +1,6 @@
 aiohttp==3.8.1
 dateparser
+pycryptodome
 requests
 ujson
-websockets==9.1
+websockets
